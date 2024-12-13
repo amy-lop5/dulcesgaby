@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Autenticación</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+    <div class="background">
+    <div class="page-container">
+    <div class="page" id="page">
+    <div class="front">
+    <div class="login-container">
+        <h2>INICIA SESIÓN</h2>
+        <form method="POST" action="login1.jsp" name="forms">
+            <label type="operation">Usuario</label><br>
+            <input type="text" name="usuario"><br>
+            <label type="operation">Password</label><br>
+            <input type="password" name="password"><br>
+            <input class="href"  type="button"onclick="funcion()" value="Aceptar">
+    </form>
+        <p>¿No tienes una cuenta? 
+        <br><a href="login.jsp">Regístrate Aquí</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script>
+        function funcion(){
+            if(document.forms.usuario.value==""){
+           alert("el campo de usuario esta vacio");
+           document.forms.usuario.focus();
+           return;
+            }
+        if(document.forms.password.value==""){
+           alert("el campo de contraseña esta vacio");
+           document.forms.password.focus();
+           return;
+            }
+        document.forms.submit();
+        }
+        
+        </script>
+
+</body>
+</html>
